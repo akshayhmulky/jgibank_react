@@ -1,0 +1,111 @@
+#main_container_id {
+  background-color: #e66f1e;
+  background-image: url('../../background.jpg');
+  background-size: cover;
+  height: 95vh;
+}
+
+.error_message {
+  color: red;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.welcome_tile {
+  color: #e66f1e;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+/* .main_container {
+    margin-top: 7%;
+  } */
+
+.bank_account_tag {
+  background-color: #e66f1e;
+  padding: 5px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.navlink_cover {
+  padding: 0;
+  background-color: rgb(196, 212, 207);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav_link_bankaccount {
+  text-decoration: none;
+  padding: 0;
+}
+
+.first_block {
+  display: flex;
+  padding: 0 8px 0 8px;
+}
+
+.title_bank {
+  font-size: 2.1rem;
+  font-weight: 600;
+  margin-top: 13px;
+  color: #fff;
+}
+
+#title_login {
+  padding-top: 40px;
+}
+
+.title_description {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.myform {
+  background-color: #9e9a9a;
+  display: flex;
+  justify-content: center;
+  max-width: 640px;
+  margin: 20px auto 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.myform input,
+.myform button {
+  padding: 13px;
+  width: 90%;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+}
+
+.myform select {
+  padding: 13px;
+  width: 94%;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+}
+
+.myform button {
+  width: 94%;
+  font-weight: 600;
+  text-transform: uppercase;
+  /* background-color: #3A928B; */
+  cursor: pointer;
+}
+
+.goto-link {
+  color: black;
+  font-size: 1.2rem;
+}
+
+a {
+  color: #fff;
+  margin-left: 10px;
+}

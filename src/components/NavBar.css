@@ -1,0 +1,40 @@
+.nav_bar {
+  display: flex;
+  background-color: #e66f1e;
+  justify-content: space-between;
+  height: 60px;
+  color: #fff;
+}
+
+.logo {
+  font-size: 2.1rem;
+  margin-left: 10px;
+  font-weight: 600;
+  line-height: 60px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu {
+  margin-right: 15px;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: aqua; */
+}
+
+li {
+  list-style-type: none;
+  margin-left: 40px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+li:hover {
+  font-weight: 600;
+}
