@@ -2,12 +2,9 @@ import { React, useEffect, useState } from 'react';
 import './EditProfile.css';
 import axios from 'axios';
 import { UPDATE_CUSOTOMER_PROFILE_BY_USERNAME_API } from '../constants/API';
-import { jwtToken } from '../utils/GetUserDetails';
-import { useNavigate } from 'react-router-dom';
 
 const EditProfile = ({ data, setEdit }) => {
   const [token, setToken] = useState('');
-  const navigate = useNavigate();
 
   //Edit profile states
   const [fullName, setFullName] = useState(data.fullName && data.fullName);
