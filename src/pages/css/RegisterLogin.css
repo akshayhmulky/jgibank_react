@@ -71,9 +71,10 @@
   margin: 20px auto 0 auto;
   padding: 20px;
   border-radius: 10px;
+  position: relative;
 }
 
-.myform input,
+/* .myform input,
 .myform button {
   padding: 13px;
   width: 90%;
@@ -81,19 +82,32 @@
   border-radius: 10px;
   border: none;
   font-size: 14px;
-}
+} */
 
-.myform select {
-  padding: 13px;
-  width: 94%;
-  margin: 10px;
+input,
+button {
+  padding: 13px 0;
+  margin: 5px 0 5px 0;
   border-radius: 10px;
   border: none;
   font-size: 14px;
 }
 
+.first_block input[name='fullName'] {
+  margin-right: 6px;
+}
+
+.myform select {
+  padding: 13px 0;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  width: 100%;
+}
+
 .myform button {
-  width: 94%;
+  width: 100%;
   font-weight: 600;
   text-transform: uppercase;
   /* background-color: #3A928B; */

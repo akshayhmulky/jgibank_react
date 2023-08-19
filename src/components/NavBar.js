@@ -54,7 +54,7 @@ const NavBar = () => {
           {role === 'ROLE_ADMIN' && (
             <>
               <li>
-                <NavLink to="/admin">Admin Dashboard</NavLink>
+                <NavLink to="/admin">Admin</NavLink>
               </li>
 
               {username === 'admin' ? (
@@ -66,9 +66,6 @@ const NavBar = () => {
                   Stop Impersonating
                 </li>
               )}
-              <li>
-                <NavLink to="/change-role">Role Change</NavLink>
-              </li>
             </>
           )}
           <li>

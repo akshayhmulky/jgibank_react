@@ -33,12 +33,12 @@ const Home = () => {
       });
   };
 
-  if (localStorage.getItem('auth_token') === null) {
-    return <Navigate replace to="/login" />;
-  }
-
   if (localStorage.getItem('username') === 'admin') {
     return <Navigate replace to="/admin" />;
+  }
+
+  if (localStorage.getItem('auth_token') === null) {
+    return <Navigate replace to="/login" />;
   }
 
   const toggleEdit = () => {

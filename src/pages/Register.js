@@ -76,38 +76,40 @@ const Register = () => {
               required
             />
           </div>
+          <div style={{ margin: '10px' }}>
+            <input
+              type="text"
+              name="address"
+              placeholder="Enter your residential address"
+              onChange={(e) => setAddress(e.target.value)}
+              value={address}
+              required
+            />
+            <input
+              type="text"
+              name="phoneNumber"
+              placeholder="Enter Phone number"
+              onChange={(e) => setPhoneNumber(e.target.value)}
+              value={phoneNumber}
+              required
+            />
+            <select value={gender} onChange={(e) => setGender(e.target.value)}>
+              <option value="">Select Gender</option>
+              <option value="MALE">MALE</option>
+              <option value="FEMALE">FEMALE</option>
+              <option value="OTHER">OTHER</option>
+            </select>
+            <input
+              type="password"
+              name="password"
+              placeholder="Enter your password"
+              onChange={(e) => setPassword(e.target.value)}
+              value={password}
+              required
+            />
+            <button>Register</button>
+          </div>
 
-          <input
-            type="text"
-            name="address"
-            placeholder="Enter your residential address"
-            onChange={(e) => setAddress(e.target.value)}
-            value={address}
-            required
-          />
-          <input
-            type="text"
-            name="phoneNumber"
-            placeholder="Enter Phone number"
-            onChange={(e) => setPhoneNumber(e.target.value)}
-            value={phoneNumber}
-            required
-          />
-          <select value={gender} onChange={(e) => setGender(e.target.value)}>
-            <option value="">Select Gender</option>
-            <option value="MALE">MALE</option>
-            <option value="FEMALE">FEMALE</option>
-            <option value="OTHER">OTHER</option>
-          </select>
-          <input
-            type="password"
-            name="password"
-            placeholder="Enter your password"
-            onChange={(e) => setPassword(e.target.value)}
-            value={password}
-            required
-          />
-          <button>Register</button>
           <span className="goto-link">
             Already have an account?<Link to="/login"> Login</Link>
           </span>

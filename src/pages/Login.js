@@ -40,12 +40,21 @@ const Login = () => {
       localStorage.setItem('username', jwt_decode(response?.data?.token).sub);
       setUsername('');
       setPassword('');
+
       if (
         jwt_decode(response?.data?.token).role[0].authority === 'ROLE_ADMIN'
       ) {
-        navigate('/admin');
-      } else {
-        navigate('/');
+        //Added timer to handle loading issue in react while routing to admin page post login
+        setTimeout(() => {
+          navigate('/admin');
+        }, 2000);
+      } else if (
+        jwt_decode(response?.data?.token).role[0].authority === 'ROLE_USER'
+      ) {
+        //Added timer to handle loading issue in react while routing to home page post login
+        setTimeout(() => {
+          navigate('/');
+        }, 2000);
       }
     } catch (error) {
       console.error('Login failed:', error.response.request.status);
