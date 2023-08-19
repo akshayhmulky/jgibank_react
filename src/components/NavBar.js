@@ -16,6 +16,12 @@ const NavBar = () => {
     localStorage.removeItem('role');
     navigate('/login');
   };
+
+  const stopImpersonating = () => {
+    localStorage.setItem('username', 'admin');
+    navigate('/admin');
+  };
+
   return (
     <div className="nav_bar">
       <div className="logo">
@@ -50,6 +56,16 @@ const NavBar = () => {
               <li>
                 <NavLink to="/admin">Admin Dashboard</NavLink>
               </li>
+
+              {username === 'admin' ? (
+                <li>
+                  <NavLink to="/impersonate-customer">Impersonate</NavLink>
+                </li>
+              ) : (
+                <li onClick={(e) => stopImpersonating(e)}>
+                  Stop Impersonating
+                </li>
+              )}
               <li>
                 <NavLink to="/change-role">Role Change</NavLink>
               </li>
@@ -62,6 +78,8 @@ const NavBar = () => {
           </li>
         </ul>
       </div>
+
+      {/* Responsive ness */}
     </div>
   );
 };

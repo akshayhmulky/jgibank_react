@@ -12,6 +12,7 @@ import AdminDashboard from './pages/adminpage/AdminDashboard';
 import UnAuthorized from './pages/UnAuthorized';
 import AccountCreation from './pages/adminpage/AccountCreation';
 import UserRoleChange from './pages/adminpage/UserRoleChange';
+import ImpersonateCustomer from './pages/adminpage/ImpersonateCustomer';
 
 function App() {
   return (
@@ -51,6 +52,15 @@ function App() {
             element={
               <AdminRoute role={'ROLE_ADMIN'}>
                 <UserRoleChange></UserRoleChange>
+              </AdminRoute>
+            }
+          />
+
+          <Route
+            path="/impersonate-customer"
+            element={
+              <AdminRoute role={'ROLE_ADMIN'}>
+                <ImpersonateCustomer></ImpersonateCustomer>
               </AdminRoute>
             }
           />

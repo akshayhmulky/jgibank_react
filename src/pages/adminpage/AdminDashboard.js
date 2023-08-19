@@ -47,8 +47,9 @@ const AdminDashboard = () => {
             fontWeight: '600',
             marginBottom: '10px',
           }}
+          onClick={() => navigate('/impersonate-customer')}
         >
-          Delegate as a customer
+          Impersonate user
         </div>
 
         <div
