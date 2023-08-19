@@ -10,7 +10,8 @@ import Login from './pages/Login';
 import { AdminRoute } from './protectedRoute/AdminRoute';
 import AdminDashboard from './pages/adminpage/AdminDashboard';
 import UnAuthorized from './pages/UnAuthorized';
-import AccountCreation from './pages/AccountCreation';
+import AccountCreation from './pages/adminpage/AccountCreation';
+import UserRoleChange from './pages/adminpage/UserRoleChange';
 
 function App() {
   return (
@@ -41,6 +42,15 @@ function App() {
             element={
               <AdminRoute role={'ROLE_ADMIN'}>
                 <AccountCreation></AccountCreation>
+              </AdminRoute>
+            }
+          />
+
+          <Route
+            path="/change-role"
+            element={
+              <AdminRoute role={'ROLE_ADMIN'}>
+                <UserRoleChange></UserRoleChange>
               </AdminRoute>
             }
           />

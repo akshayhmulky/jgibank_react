@@ -64,6 +64,16 @@ const Login = () => {
       <div className="title_description">
         Your secured banking is just one step away
       </div>
+      <div style={{ fontSize: '1.4rem' }}>
+        <br />
+        <div>Admin Credential for account creation process</div>
+        <span>
+          username: <strong>admin</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+        <span>
+          password: <strong>admin</strong>
+        </span>
+      </div>
       <div className="myform">
         <form onSubmit={onSubmit}>
           <span className="error_message">{errorMessage}</span>

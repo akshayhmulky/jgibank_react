@@ -7,6 +7,7 @@ const NavBar = () => {
 
   const jwtToken = localStorage.getItem('auth_token');
   const role = localStorage.getItem('role');
+  const username = localStorage.getItem('username');
 
   const logOut = (e) => {
     e.preventDefault();
@@ -25,7 +26,7 @@ const NavBar = () => {
         <ul>
           {/* {role !== 'ROLE_ADMIN' ? <></> : <></>} */}
 
-          {role !== 'ROLE_ADMIN' && (
+          {(username !== 'admin' || role === 'ROLE_USER') && (
             <>
               <li>
                 <NavLink to="/accounts">Account</NavLink>
@@ -44,9 +45,16 @@ const NavBar = () => {
               </li>
             </>
           )}
-          <li>
-            <NavLink to="/admin">Admin Dashboard</NavLink>
-          </li>
+          {role === 'ROLE_ADMIN' && (
+            <>
+              <li>
+                <NavLink to="/admin">Admin Dashboard</NavLink>
+              </li>
+              <li>
+                <NavLink to="/change-role">Role Change</NavLink>
+              </li>
+            </>
+          )}
           <li>
             <NavLink to="">
               <span onClick={(e) => logOut(e)}>Logout</span>

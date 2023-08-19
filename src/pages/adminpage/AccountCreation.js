@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import NavBar from '../components/NavBar';
-import { ACCOUNT_OPENING } from '../constants/API';
+import NavBar from '../../components/NavBar';
+import { ACCOUNT_OPENING } from '../../constants/API';
 
-import './css/Beneficiary.css';
-import './css/Account.css';
+import '../css/Beneficiary.css';
+import '../css/Account.css';
 
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';

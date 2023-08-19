@@ -33,25 +33,12 @@ const Home = () => {
       });
   };
 
-  useEffect(() => {
-    // const config = {
-    //   headers: {
-    //     Authorization: `Bearer ${jwtToken}`,
-    //   },
-    // };
-    // axios
-    //   .get(`${FETCH_CUSTOMER_BY_USERNAME_API}${username}`, config)
-    //   .then((response) => {
-    //     setData(response.data);
-    //     console.log('RESPONE DATE', data);
-    //   })
-    //   .catch((error) => {
-    //     console.error('Error fetching data:', error);
-    //   });
-  }, [edit]);
-
   if (localStorage.getItem('auth_token') === null) {
     return <Navigate replace to="/login" />;
+  }
+
+  if (localStorage.getItem('username') === 'admin') {
+    return <Navigate replace to="/admin" />;
   }
 
   const toggleEdit = () => {

@@ -14,3 +14,8 @@ export const FUND_TRANSFER =
   'http://localhost:8080/api/v1/account/fundtransfer';
 
 export const ACCOUNT_OPENING = 'http://localhost:8080/api/v1/account/add';
+
+export const GET_ALL_CUSTOMERS = 'http://localhost:8080/api/v1/customers';
+
+export const CHANGE_USER_ROLE =
+  'http://localhost:8080/api/v1/customer/rolechange';
