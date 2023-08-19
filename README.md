@@ -21,7 +21,7 @@ Your secured banking is just one step away
 
 
 ## Technologies used:
- - Frontend: React
+ - Frontend: React 18
  - Backend: Spring Boot 3.1.2  (https://github.com/akshayhmulky/jgibank_springboot)
  - Database: MYSQL
  - Documentation: Swagger  (http://jgibank-env.eba-fut44mhc.us-east-1.elasticbeanstalk.com/swagger-ui/index.html)
