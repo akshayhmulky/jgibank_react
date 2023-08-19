@@ -40,8 +40,13 @@ const Login = () => {
       localStorage.setItem('username', jwt_decode(response?.data?.token).sub);
       setUsername('');
       setPassword('');
-
-      navigate('/');
+      if (
+        jwt_decode(response?.data?.token).role[0].authority === 'ROLE_ADMIN'
+      ) {
+        navigate('/admin');
+      } else {
+        navigate('/');
+      }
     } catch (error) {
       console.error('Login failed:', error.response.request.status);
       if (error.response.request.status === 400) {
